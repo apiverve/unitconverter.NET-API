@@ -1,38 +1,69 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <Nullable>enable</Nullable>
+    <TargetFrameworks>net20;net35;net40;net45;netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>APIVerve.API.UnitConverter</Title>
-    <Version>1.0.0</Version>
+    <Version>1.0.5</Version>
     <Authors>APIVerve</Authors>
     <Company>APIVerve</Company>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <IncludeContentInPack>true</IncludeContentInPack>
+
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
-    <PackageProjectUrl>https://apiverve.com/marketplace/api/unitconverter</PackageProjectUrl>
+    <PackageProjectUrl>https://apiverve.com/?utm_source=nuget</PackageProjectUrl>
     <SignAssembly>False</SignAssembly>
     <Description>Unit Converter is a simple tool for converting units. It returns the converted value.</Description>
-    <RepositoryUrl>https://github.com/apiverve/unitconverter-NET</RepositoryUrl>
+    <RepositoryUrl>https://github.com/apiverve/unitconverter.NET-API</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>unit converter; unit conversion; unit converter api; unit conversion api; unit converter tool; unit conversion tool; unit converter software; unit conversion software; unit converter service; unit conversion service; unit converter library; unit conversion library; unit converter sdk; unit conversion sdk; unit converter code; unit conversion code; unit converter script; unit conversion script; unit converter program; unit conversion program; unit converter application; unit conversion application; unit converter app; unit conversion app; unit converter tool; unit conversion tool; unit converter utility; unit conversion utility; unit converter helper; unit conversion helper; unit converter helper tool; unit conversion helper tool; unit converter helper software; unit conversion helper software; unit converter helper service; unit conversion helper service; unit converter helper library; unit conversion helper library; unit converter helper sdk; unit conversion helper sdk; unit converter helper code; unit conversion helper code; unit converter helper script; unit conversion helper script; unit converter helper program; unit conversion helper program; unit converter helper application; unit conversion helper application; unit converter helper app; unit conversion helper app; unit converter helper tool; unit conversion helper tool; unit converter helper utility; unit conversion helper utility; unit converter helper; unit conversion helper</PackageTags>
+    <PackageTags>unit converter; unit conversion; unit converter api; unit conversion api; unit converter tool</PackageTags>
     <Copyright>©2024 APIVerve. All Rights Reserved</Copyright>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <PackageIcon>favicon@128.png</PackageIcon>
+    <BaseOutputPath>.\bin</BaseOutputPath>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <PackageId>APIVerve.API.UnitConverter</PackageId>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <None Remove="LICENSE" />
+    <None Remove="Readme.md" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="LICENSE">
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\Media\favicon@128.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Update="Readme.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>
