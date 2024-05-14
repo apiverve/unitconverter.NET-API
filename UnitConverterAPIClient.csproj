@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>APIVerve.API.UnitConverter</Title>
+    <Version>1.0.0</Version>
+    <Authors>APIVerve</Authors>
+    <Company>APIVerve</Company>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <PackageProjectUrl>https://apiverve.com/marketplace/api/unitconverter</PackageProjectUrl>
+    <SignAssembly>False</SignAssembly>
+    <Description>Unit Converter is a simple tool for converting units. It returns the converted value.</Description>
+    <RepositoryUrl>https://github.com/apiverve/unitconverter-NET</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>unit converter; unit conversion; unit converter api; unit conversion api; unit converter tool; unit conversion tool; unit converter software; unit conversion software; unit converter service; unit conversion service; unit converter library; unit conversion library; unit converter sdk; unit conversion sdk; unit converter code; unit conversion code; unit converter script; unit conversion script; unit converter program; unit conversion program; unit converter application; unit conversion application; unit converter app; unit conversion app; unit converter tool; unit conversion tool; unit converter utility; unit conversion utility; unit converter helper; unit conversion helper; unit converter helper tool; unit conversion helper tool; unit converter helper software; unit conversion helper software; unit converter helper service; unit conversion helper service; unit converter helper library; unit conversion helper library; unit converter helper sdk; unit conversion helper sdk; unit converter helper code; unit conversion helper code; unit converter helper script; unit conversion helper script; unit converter helper program; unit conversion helper program; unit converter helper application; unit conversion helper application; unit converter helper app; unit conversion helper app; unit converter helper tool; unit conversion helper tool; unit converter helper utility; unit conversion helper utility; unit converter helper; unit conversion helper</PackageTags>
+    <Copyright>©2024 APIVerve. All Rights Reserved</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="Readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
