@@ -70,7 +70,7 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-var queryOptions = new unitconverterQueryOptions {
+var queryOptions = new UnitConverterQueryOptions {
   value = 100,
   from = "lb",
   to = "kg"
@@ -117,7 +117,8 @@ if(response.error != null) {
         "plural": "Kilograms"
       }
     }
-  }
+  },
+  "code": 200
 }
 ```
 
