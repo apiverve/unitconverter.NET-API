@@ -4,91 +4,100 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class result
-{
-    [JsonProperty("result")]
-    public double result { get; set; }
+    /// <summary>
+    /// Result data
+    /// </summary>
+    public class Result
+    {
+        [JsonProperty("result")]
+        public double Result { get; set; }
 
-    [JsonProperty("from")]
-    public string from { get; set; }
+        [JsonProperty("from")]
+        public string From { get; set; }
 
-    [JsonProperty("to")]
-    public string to { get; set; }
+        [JsonProperty("to")]
+        public string To { get; set; }
 
-}
+    }
+    /// <summary>
+    /// From data
+    /// </summary>
+    public class From
+    {
+        [JsonProperty("abbr")]
+        public string Abbr { get; set; }
 
-public class from
-{
-    [JsonProperty("abbr")]
-    public string abbr { get; set; }
+        [JsonProperty("measure")]
+        public string Measure { get; set; }
 
-    [JsonProperty("measure")]
-    public string measure { get; set; }
+        [JsonProperty("system")]
+        public string System { get; set; }
 
-    [JsonProperty("system")]
-    public string system { get; set; }
+        [JsonProperty("singular")]
+        public string Singular { get; set; }
 
-    [JsonProperty("singular")]
-    public string singular { get; set; }
+        [JsonProperty("plural")]
+        public string Plural { get; set; }
 
-    [JsonProperty("plural")]
-    public string plural { get; set; }
+    }
+    /// <summary>
+    /// To data
+    /// </summary>
+    public class To
+    {
+        [JsonProperty("abbr")]
+        public string Abbr { get; set; }
 
-}
+        [JsonProperty("measure")]
+        public string Measure { get; set; }
 
-public class to
-{
-    [JsonProperty("abbr")]
-    public string abbr { get; set; }
+        [JsonProperty("system")]
+        public string System { get; set; }
 
-    [JsonProperty("measure")]
-    public string measure { get; set; }
+        [JsonProperty("singular")]
+        public string Singular { get; set; }
 
-    [JsonProperty("system")]
-    public string system { get; set; }
+        [JsonProperty("plural")]
+        public string Plural { get; set; }
 
-    [JsonProperty("singular")]
-    public string singular { get; set; }
+    }
+    /// <summary>
+    /// UnitDefinitions data
+    /// </summary>
+    public class UnitDefinitions
+    {
+        [JsonProperty("from")]
+        public From From { get; set; }
 
-    [JsonProperty("plural")]
-    public string plural { get; set; }
+        [JsonProperty("to")]
+        public To To { get; set; }
 
-}
+    }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("result")]
+        public Result Result { get; set; }
 
-public class unitDefinitions
-{
-    [JsonProperty("from")]
-    public from from { get; set; }
+        [JsonProperty("unitDefinitions")]
+        public UnitDefinitions UnitDefinitions { get; set; }
 
-    [JsonProperty("to")]
-    public to to { get; set; }
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-}
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-public class data
-{
-    [JsonProperty("result")]
-    public result result { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-    [JsonProperty("unitDefinitions")]
-    public unitDefinitions unitDefinitions { get; set; }
-
-}
-
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
-
-    [JsonProperty("error")]
-    public object error { get; set; }
-
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
